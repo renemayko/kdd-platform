@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>KDD Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+ <body>
+    <header>
+    <h1>KDD Platform</h1>
+   <p id="tagline">Connecting people. Moving money. Building trust.</p>
+    <select id="language">
+    <option value="en">English</option>
+    <option value="ht">Kreyòl</option>
+    <option value="fr">Français</option>
+    <option value="es">Español</option>
+</select>
+    </header>
+    <main>
+    <section class="actions">
+       <h2 id="actionPrompt">What would you like to do?</h2>
+       <button id="sendMoneyBtn">Send Money</button>
+        <button id="receiveMoneyBtn">Receive Money</button>
+    </section>
+    <section id="sendDemo" class="send-demo" hidden><h2 id="sendDemoTitle">Send Money</h2>
+   <input type="number" id="sendAmount" placeholder="Amount" min="0.01" step="0.01">
+<input type="text" id="recipientName" placeholder="Recipient">
+<button id="sendContinueBtn">Continue</button>
+    </section>
+    <section id="receiveDemo" class="send-demo" hidden>
+    <h2>Receive Money</h2>
+    <input type="number" id="receiveAmount" placeholder="Amount" min="0.01" step="0.01">
+    <input type="text" id="senderName" placeholder="Sender">
+    <button id="receiveContinueBtn">Continue</button>
+</section>
+<section id="reviewDemo" class="send-demo" hidden>
+    <h2>Review Transaction</h2>
+    <p id="reviewType"></p>
+    <p id="reviewAmount"></p>
+    <p id="reviewPerson"></p>
+    <button id="confirmTransactionBtn">Confirm</button>
+</section>
+    <section class="trust">
+   <h2 id="trustTitle">Simple. Secure. Transparent.</h2>
+    <p id="trustText">Send and receive money with clear steps and trusted support.</p>
+</section>
+<section class="how-it-works">
+   <h2 id="howItWorksTitle">How KDD Works</h2>
+    <p id="howStep1">1. Choose Send Money or Receive Money.</p>
+    <p id="howStep2">2. Enter the required information.</p>
+   <p id="howStep3">3. Review and confirm your transaction.</p>
+</section>
+<section class="transaction-history">
+    <h2 id="transactionHistoryTitle">Transaction History</h2>
+    <div id="transactionHistoryList"></div>
+</section>
+<section class="user-account">
+    <h2>User Account</h2>
+
+    <input id="userFullName" type="text" placeholder="Full Name">
+    <input id="userEmail" type="email" placeholder="Email">
+    <input id="userCountry" type="text" placeholder="Country">
+
+    <button id="saveProfileBtn">Save Profile</button>
+    <p id="verificationStatus">Verification Status: Pending</p>
+</section>
+<section class="wallet-connection">
+    <h2>Wallet Connection</h2>
+
+    <select id="walletProvider">
+        <option value="">Choose a wallet or payment partner</option>
+        <option value="moncash">MonCash</option>
+        <option value="bank">Bank Account</option>
+        <option value="payment-partner">Payment Partner</option>
+    </select>
+
+    <button id="connectWalletBtn">Connect</button>
+
+    <p id="walletStatus">Wallet Status: Not Connected</p>
+</section>
+<section class="security-center">
+    <h2>Security & Transaction Readiness</h2>
+
+    <p id="profileSecurityStatus">Profile: Checking...</p>
+    <p id="walletSecurityStatus">Wallet: Checking...</p>
+    <p id="transactionSecurityStatus">Transaction Records: Protected</p>
+    <p id="backendSecurityStatus">Backend Connection: Demo Mode</p>
+</section>
+<section class="auth-section">
+    <h2>KDD Account</h2>
+
+    <input id="authEmail" type="email" placeholder="Email">
+    <input id="authPassword" type="password" placeholder="Password">
+
+    <button id="signUpBtn">Create Account</button>
+    <button id="signInBtn">Sign In</button>
+    <button id="signOutBtn">Sign Out</button>
+
+    <p id="authStatus">Not signed in</p>
+</section>
+<section class="admin-monitoring">
+    <h2>Admin Monitoring</h2>
+
+    <p id="adminTransactionCount">Transactions: 0</p>
+    <p id="adminProfileStatus">User Profile: Checking...</p>
+    <p id="adminWalletStatus">Wallet: Checking...</p>
+    <p id="adminSystemMode">System Mode: Demo</p>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+    </html>     

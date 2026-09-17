@@ -1,0 +1,201 @@
+body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     background-color: #f4f6f8;
+     color: #1f2937;
+     }
+ h1 {
+    text-align: center;
+    margin-top: 60px;
+    color: #0f3d56;
+ }
+ p {
+    text-align: center;
+    font-size: 18px;
+    color: #4b5563;
+    }
+    header {
+        padding: 30px 20px;
+        background-color: white;
+        border-bottom: 1px solid #e5e7eb;
+        }
+.actions {
+    text-align: center;
+    padding: 50px 20px;
+}
+.actions h2 {
+    margin-bottom: 25px;
+    color: #0f3d56;
+}
+.actions button {
+    padding: 12px 22px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+}
+.actions button {
+    background-color: #0f3d56;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.trust {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+}
+.trust h2 {
+    color: #0f3d56;
+    margin-bottom: 15px;
+}
+.trust p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.actions button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+.how-it-works {
+    text-align: center;
+    padding: 40px 20px;
+}
+.how-it-works h2 {
+    color: #0f3d56;
+    margin-bottom: 20px;
+}
+.how-it-works p {
+    margin: 10px 0;
+    color: #4b5563;
+    font-size: 17px;
+}
+.how-it-works {
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.how-it-works {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+}
+.send-demo {
+    text-align: center;
+    background-color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+.send-demo input {
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid #d7dee5;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.send-demo button {
+    padding: 12px 22px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0f3d56;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.transaction-history,
+.user-account,
+.wallet-connection,
+.security-center,
+.admin-monitoring {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 28px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.transaction-history h2,
+.user-account h2,
+.wallet-connection h2,
+.security-center h2,
+.admin-monitoring h2 {
+    text-align: center;
+    color: #243b53;
+}
+
+.user-account input,
+.wallet-connection select {
+    padding: 12px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#saveProfileBtn,
+#connectWalletBtn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff7a00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#saveProfileBtn:hover,
+#connectWalletBtn:hover {
+    background-color: #e86f00;
+}
+
+#verificationStatus,
+#walletStatus,
+.security-center p,
+.admin-monitoring p {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.auth-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.auth-section input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 14px;
+    margin: 8px;
+    border: 1px solid #d8dee8;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.auth-section button {
+    padding: 12px 18px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 10px;
+    background: #f59e0b;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-section button:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+}
