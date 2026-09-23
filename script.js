@@ -62,7 +62,7 @@ const reviewType = document.getElementById("reviewType");
 const reviewAmount = document.getElementById("reviewAmount");
 const reviewPerson = document.getElementById("reviewPerson");
 const confirmTransactionBtn = document.getElementById("confirmTransactionBtn");
-confirmTransactionBtn.addEventListener("click", () => {
+confirmTransactionBtn.addEventListener("click", async () => {
     const transaction = {
     type: reviewType.textContent,
     amount: reviewAmount.textContent,
@@ -70,6 +70,24 @@ confirmTransactionBtn.addEventListener("click", () => {
     status: "Completed",
     date: new Date().toLocaleString()
 };
+
+const { data: { user } } = await supabaseClient.auth.getUser();
+
+const { error: saveTransactionError } = await supabaseClient
+    .from("transactions")
+    .insert({
+        user_id: user.id,
+       transaction_type: reviewType.textContent.includes("Send") ? "send" : "receive",
+        amount: Number(reviewAmount.textContent.replace(/[^0-9.-]+/g, "")),
+        recipient_name: reviewPerson.textContent,
+        status: "completed"
+    });
+
+if (saveTransactionError) {
+    console.error("Transaction save error:", saveTransactionError);
+    alert("Transaction could not be saved.");
+    return;
+}
 
 const transactionHistory =
     JSON.parse(localStorage.getItem("kddTransactionHistory")) || [];
